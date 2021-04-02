@@ -1,17 +1,25 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ChangeLanguage />
+    <Localization :msg="welcomeMessage"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Localization from './components/Localization.vue'
+import ChangeLanguage from './components/ChangeLanguage.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Localization,
+    ChangeLanguage
+  },
+  computed: {
+    welcomeMessage () {
+      return this.$t('welcomeMessage')
+    }
   }
 }
 </script>

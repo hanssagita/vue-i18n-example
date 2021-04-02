@@ -1,4 +1,4 @@
-# i18n-example
+# vue-i18n-example
 
 ## Project setup
 ```
